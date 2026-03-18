@@ -1,0 +1,45 @@
+/* 1. Global Reset & Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding/borders don't add to dimensions */
+}
+
+/* 2. Body Layout using strictly ViewPort Units */
+body {
+    width: 100vw;
+    height: 100vh;
+    /* 10% spacing top/bottom, 25% spacing left/right */
+    padding: 10vh 25vw; 
+}
+
+/* 3. Container matching the remaining space perfectly */
+.image-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* 4. Image Styling */
+.image-container img {
+    width: 100%;
+    height: 80%; /* Takes 80% of the container's height */
+    display: block; /* Critical: removes the default inline gap below images */
+    object-fit: cover; /* Prevents the image from squishing/distorting */
+}
+
+/* 5. Button Styling */
+.image-container button {
+    width: 100%;
+    height: 20%; /* Takes the remaining 20% of the container's height */
+    display: block;
+    border: none;
+    
+    /* Gradient background and Font settings */
+    background: linear-gradient(to right, #ffc107, #4caf50);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2vw; /* ViewPort units used for font sizing */
+    cursor: pointer;
+}
+
